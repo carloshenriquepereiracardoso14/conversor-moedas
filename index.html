@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/684/684240.png" type="image/x-icon">
     <title>Conversor de moedas</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196f3">
+    <link rel="icon" href="img/icon-192.png">
+    
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(reg => console.log('Service Worker registrado!'))
+          .catch(err => console.error('Erro ao registrar Service Worker:', err));
+      }
+    </script>    
+
 </head>
 
 <body>
